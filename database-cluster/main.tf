@@ -1,4 +1,4 @@
-module "cluster" {
+  module "cluster" {
   source  = "terraform-aws-modules/rds-aurora/aws"
 
   name           = "test-aurora-db-postgres96"
