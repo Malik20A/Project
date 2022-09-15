@@ -32,9 +32,4 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
-Class2/.terraform.lock.hcl
-Class2/main.tf
-Class2/security_group.tf
-Class2/ASG/.terraform.lock.hcl
-Class5/.terraform.lock.hcl
-Class5/backend.tf
+database-cluster/.terraform.lock.hcl
