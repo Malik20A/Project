@@ -2,9 +2,9 @@
   source  = "terraform-aws-modules/rds-aurora/aws"
 
   name           = "test-aurora-db-postgres96"
-  engine         = "aurora-postgresql"
-  engine_version = "11.12"
-  instance_class = "db.r6g.large"
+  engine         = "${var.engine}"
+  engine_version = "${var.engine_version}"
+  instance_class = "${var.db_cluster_instance_class}"
   instances = {
     one   = {}
     two   = {}
@@ -12,11 +12,11 @@
     four  = {}
   }
 
-  vpc_id  = "vpc-12345678"
-  subnets = ["subnet-12345678", "subnet-87654321"]
+  vpc_id  = "${var.vpc_id}"
+  subnets = "${var.subnets}"
 
-  allowed_security_groups = ["sg-12345678"]
-  allowed_cidr_blocks     = ["10.20.0.0/20"]
+  allowed_security_groups = "${var.allowed_security_groups}"
+  allowed_cidr_blocks     = "${var.allowed_cidr_blocks}"
 
   storage_encrypted   = true
   apply_immediately   = true
